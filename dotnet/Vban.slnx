@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Vban.Core/Vban.Core.csproj" />
+    <Project Path="src/VbanEmitter/VbanEmitter.csproj" />
+    <Project Path="src/VbanReceptor/VbanReceptor.csproj" />
+    <Project Path="src/VbanSendText/VbanSendText.csproj" />
+  </Folder>
+</Solution>
