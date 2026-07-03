@@ -33,7 +33,7 @@ internal static class Program
         Console.Write("-q, --quality=ID        : network quality indicator from 0 (low latency) to 4. This also have interaction with jack buffer size. default is 1\n");
         Console.Write("-c, --channels=LIST     : channels from the stream to use. LIST is of form x,y,z,... default is to forward the stream as it is\n");
         Console.Write("-o, --output=NAME       : DEPRECATED. please use -d\n");
-        Console.Write("-d, --device=NAME       : Audio device name. This is file name for file backend, server name for jack backend, device for alsa, stream_name for pulseaudio.\n");
+        Console.Write("-d, --device=NAME       : Audio device name. This is file name for file backend, server name for jack backend, device for alsa/naudio-alsa, stream_name for pulseaudio, target node for pipewire, device name or number for wasapi/mme, driver name for asio.\n");
         Console.Write("-l, --loglevel=LEVEL    : Log level, from 0 (FATAL) to 4 (DEBUG). default is 1 (ERROR)\n");
         Console.Write("-h, --help              : display this message\n\n");
     }

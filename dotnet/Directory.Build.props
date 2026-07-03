@@ -1,6 +1,13 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <!--
+      Dual-target: the plain build covers Linux (and any other non-Windows
+      platform); the windows TFM additionally compiles the NAudio WASAPI /
+      WinMM / ASIO backends, whose NAudio 3.0 packages only ship Windows
+      assemblies.
+    -->
+    <TargetFrameworks>net10.0;net10.0-windows10.0.19041</TargetFrameworks>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>

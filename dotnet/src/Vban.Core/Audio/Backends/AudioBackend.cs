@@ -35,9 +35,17 @@ public static class AudioBackendRegistry
 
     private static readonly Item[] BackendList =
     {
+#if WINDOWS
+        // windows build: wasapi first so it becomes the default backend
+        new(WasapiBackend.Name, () => new WasapiBackend()),
+        new(MmeBackend.Name, () => new MmeBackend()),
+        new(AsioBackend.Name, () => new AsioBackend()),
+#endif
         new(AlsaBackend.Name, () => new AlsaBackend()),
         new(PulseAudioBackend.Name, () => new PulseAudioBackend()),
         new(JackBackend.Name, () => new JackBackend()),
+        new(NAudioAlsaBackend.Name, () => new NAudioAlsaBackend()),
+        new(PipeWireBackend.Name, () => new PipeWireBackend()),
         new(PipeBackend.Name, () => new PipeBackend()),
         new(FileBackend.Name, () => new FileBackend()),
     };

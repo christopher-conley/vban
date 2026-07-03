@@ -31,7 +31,7 @@ internal static class Program
         Console.Write("-p, --port=PORT         : MANDATORY. port to use\n");
         Console.Write("-s, --streamname=NAME   : MANDATORY. streamname to use\n");
         Console.Write($"-b, --backend=TYPE      : audio backend to use. {AudioBackendRegistry.GetHelp()}\n");
-        Console.Write("-d, --device=NAME       : Audio device name. This is file name for file backend, server name for jack backend, device for alsa, stream_name for pulseaudio.\n");
+        Console.Write("-d, --device=NAME       : Audio device name. This is file name for file backend, server name for jack backend, device for alsa/naudio-alsa, stream_name for pulseaudio, target node for pipewire, device name or number for wasapi/mme, driver name for asio.\n");
         Console.Write("-r, --rate=VALUE        : Audio device sample rate. default 44100\n");
         Console.Write("-n, --nbchannels=VALUE  : Audio device number of channels. default 2\n");
         Console.Write("-f, --format=VALUE      : Audio device sample format (see below). default is 16I (16bits integer)\n");
